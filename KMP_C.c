@@ -20,8 +20,6 @@ void Next(char *T, int *next)
             {
                 next[i] = next[j];
             }
-
-            //next[i]=j;
         }
         else
         {
