@@ -36,7 +36,7 @@ void Next(char *T, int *next)
 
 int KMP(char *S, char *T)
 {
-    int next[10];
+    int next[100];
     Next(T, next); //根据模式串T,初始化next数组
     int i = 1;
     int j = 1;
@@ -54,19 +54,19 @@ int KMP(char *S, char *T)
         {
             j = next[j]; //如果测试两个字符不相等，i不动，j变为当前测试字符串的next值
         }
+       
     }
-    if (j > strlen(T))
-    {
-        return i - (int)strlen(T);
-    }
+     if (j > strlen(T))
+        {
+            return i - (int)strlen(T);
+        }
     return -1;
 }
 
-int main(void)
+int main()
 {
     //int i=KMP("ababcabcacbab","abcac");
     int i = KMP("aaaaaaaaadabcdefghaaaaaaaaabkmlfgi", "aaaaaaaaab");
-
-    printf("%d", i);
+    printf("打印值为：%d", i);
     return 0;
 }
