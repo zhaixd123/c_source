@@ -1,3 +1,6 @@
+//先序，递归遍历
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -39,7 +42,7 @@ void CreateBiTree(BiTree *T)
 }
 
 void displayElem(BiTNode* elem){
-    printf("%d",elem->data);
+    printf("%d ",elem->data);
 }
 
 void PreOrderTraverse(BiTree T){
@@ -56,6 +59,7 @@ int main()
 {
     BiTree Tree;
     CreateBiTree(&Tree);
-    printf("%d", Tree->lchild->lchild->data);
+    printf("先序遍历：\n");
+    PreOrderTraverse(Tree);
     return 0;
 }
